@@ -1,0 +1,40 @@
+.fondo{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("https://img.freepik.com/vector-gratis/marco-vector-perros-sobre-fondo-blanco_53876-127700.jpg?w=2000");
+    background-size: cover;
+    background-repeat: no-repeat;   
+    overflow-y: auto; 
+}
+.contenedor {
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 218, 218, 0.3);
+    align-items: center;
+    justify-content:center;
+    box-shadow: 3px 3px 5px 1px rgb(112, 44, 44);
+    width: 280px;
+    height: 420px;
+    
+ 
+}
+
+.contenedor :hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+
+.image {
+    display: flex;    
+    background-color: #ce5249;
+    box-shadow: 3px 3px 5px 1px rgb(112, 44, 44);
+    border-radius: 6px;
+    width: 150px;
+    height: 120px; 
+    
+}
+
+
