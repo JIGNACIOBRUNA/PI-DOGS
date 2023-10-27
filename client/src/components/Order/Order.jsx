@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { orderByName, orderByWeight } from "../../redux/actions";
+import style from "./Order.module.css";
 
 
 const Order = ({setOrder}) =>{
@@ -12,13 +13,13 @@ const Order = ({setOrder}) =>{
       if (e.target.value === 'mayor' || e.target.value === 'menor') dispatch(orderByWeight(e.target.value));
     }
     return(
-        <div>
-            <select defaultValue='DEFAULT' onChange={handleSort}>
+        <div className={style.filter}>
+            <select className={style.filters} defaultValue='DEFAULT' onChange={handleSort}>
                 <option value="DEFAULT" >Order</option>
                 <option value="asc">(A-Z)</option>
                 <option value="desc">(Z-A)</option>
             </select>
-            <select defaultValue='DEFAULT' onChange={handleSort}>
+            <select className={style.filters} defaultValue='DEFAULT' onChange={handleSort}>
                 <option value="DEFAULT" >Weight</option>
                 <option value="menor">Weight (asc)</option>
                 <option value="mayor">Weight (desc)</option>

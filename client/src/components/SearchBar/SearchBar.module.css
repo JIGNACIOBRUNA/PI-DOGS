@@ -1,0 +1,25 @@
+.contenedor{
+    display: flex;
+}
+
+.search{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;  
+}
+
+.button{
+   background-color: black;
+   color: white;
+   font-size: 15px;
+   font-family: 'Aharoni', sans-serif;
+   border: none;
+   border-radius: 5px;
+   padding: 5px 10px;
+   cursor: pointer;
+}
+
+.button:hover{ 
+    transform: scale(1.1);
+    transition: all 0.3s;
+}

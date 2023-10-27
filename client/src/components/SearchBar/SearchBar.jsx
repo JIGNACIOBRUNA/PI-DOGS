@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { getNameDog, setCurrentPage } from "../../redux/actions";
-
+import style from "./SearchBar.module.css";
 
 const SearchBar = () =>{
     const dispatch = useDispatch();
@@ -23,9 +23,9 @@ const SearchBar = () =>{
     }
 
     return(
-        <div>
-            <input type="text" placeholder="Search" value={dog} onChange={e => handleChangeName(e)} ></input>
-            <button type="submit" onClick={e => handleSubmit(e)}>Search</button>
+        <div className={style.contenedor}>
+            <input className={style.search} type="text" placeholder="Search" value={dog} onChange={e => handleChangeName(e)} ></input>
+            <button className={style.button} type="submit" onClick={e => handleSubmit(e)}>Search</button>
         </div>
     )
 }

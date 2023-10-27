@@ -124,8 +124,8 @@ const Form = () => {
         <div className={style.fondo}>
             <Navbar />
             <h1>Form</h1>
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <div>
+            <form className={style.form} onSubmit={(e) => handleSubmit(e)}>
+                <div className={style.formGroup}>
                     <label >
                         Name <span>*</span>
                     </label>
@@ -135,27 +135,29 @@ const Form = () => {
                     value={input.name}
                     placeholder="Breed name"
                     onChange={handleChange}
+                    className={style.input}
                 />
                 {errors.name && <p>{errors.name}</p>}
                 <div >
-                    <div>
+                    <div className={style.formGroup}>
                         <label >
                             Height <span>*</span>
                         </label>
-                        <div>
+                        <div className={style.formGroup}>
                             <input
                                 name="height"
                                 value={input.height}
                                 placeholder="cm"
                                 onChange={handleChange}
                                 type="string"
+                                className={style.input}
                             />
                             {errors.height && (<p>{errors.height}</p>)}
                         </div>
                     </div>
                 </div>
                 <div >
-                    <div >
+                    <div className={style.formGroup}>
                         <label >
                             Weight <span>*</span>
                         </label>
@@ -166,13 +168,14 @@ const Form = () => {
                                 placeholder="kg"
                                 onChange={handleChange}
                                 type="number"
+                                className={style.input}
                             />
                             {errors.weight && (<p>{errors.weight}</p>)}
                         </div>
                     </div>
                 </div>
                 <div >
-                    <div>
+                    <div className={style.formGroup}>
                         <label>Life span</label>
                         <div>
                             <input
@@ -181,13 +184,14 @@ const Form = () => {
                                 placeholder="year"
                                 onChange={handleChange}
                                 type="number"
+                                className={style.input}
                             />
                             {errors.life_span && (<p>{errors.life_span}</p>)}
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div className={style.formGroup}>
                         <label>Image</label>
                     </div>
                     <input
@@ -195,16 +199,18 @@ const Form = () => {
                         value={input.image}
                         placeholder="Image URL"
                         onChange={handleChange}
+                        className={style.input}
                     />
                 </div>
                 <div>
-                    <div>
+                    <div className={style.formGroup}>
                         <label>Temperaments</label>
                     </div>             
                     <select
                         defaultValue="DEFAULT"
                         name="form-temperaments"
                         onChange={handleSelect}
+                        className={style.select}
                     >
                         <option value="DEFAULT" disabled>
                             Select temperaments...
@@ -218,7 +224,7 @@ const Form = () => {
                             </option>
                         ))}
                     </select>
-                    <ul>
+                    <ul className={style.temperamentList}>
                         {temperamentDB.map((temperament, id) => (
                             <li key={id}>
                                 {temperament}
@@ -226,8 +232,8 @@ const Form = () => {
                         ))}
                     </ul>
                 </div>
-                <div>
-                    <button type="submit">
+                <div className={style.formGroup}>
+                    <button type="submit" className={style.submitButton}>
                         Create dog
                     </button>
                 </div>

@@ -63,10 +63,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div>
       {renderPageNumbers().length > 0 ? (
-        <ul className="pagination">
-          <button onClick={handlePrevious}>Prev</button>
+        <ul className={style.pagination}>
+          <button onClick={handlePrevious} className={style.buttonPrevNext}>Prev</button>
           {renderPageNumbers()}
-          <button onClick={handleNext}>Next</button>
+          <button onClick={handleNext} className={style.buttonPrevNext}>Next</button>
         </ul>
       ) : (
         <ul className="pagination">{renderPageNumbers()}</ul>

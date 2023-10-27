@@ -7,3 +7,72 @@
     background-repeat: no-repeat;   
     overflow-y: auto; 
 }
+.form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Estilo para grupos de formulario */
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para etiquetas de formulario */
+  label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  /* Estilo para campos de entrada */
+  .input {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Estilo para el botón de envío */
+  .submitButton {
+    background-color: #a83232;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #a87132;
+  }
+  
+  /* Estilo para la lista de temperamentos */
+  .temperamentList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .temperamentList li {
+    margin-bottom: 5px;
+  }
+  
+  /* Estilo para el menú desplegable */
+  .select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 4px 0;
+  }
+  
+  /* Estilo para los errores del formulario */
+  p {
+    color: red;
+    margin: 5px 0;
+    font-size: 12px;
+  }

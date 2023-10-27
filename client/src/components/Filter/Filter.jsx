@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterTemperaments, filterOrigin, setCurrentPage } from "../../redux/actions";
+import style from "./Filter.module.css";
 
 
 const FilterByTemperaments = () =>{
@@ -18,8 +19,8 @@ const FilterByTemperaments = () =>{
     };
 
     return(
-        <div>
-            <select name="Temperaments" onChange={filterByTemperament} id="">
+        <div className={style.filter}>
+            <select className={style.filters} name="Temperaments" onChange={filterByTemperament} id="">
                 <option value="Default" disabled>Temperaments</option>
                 <option key={0} value="all">All Temperaments</option>
                 {temperaments.length ? (
@@ -31,7 +32,7 @@ const FilterByTemperaments = () =>{
                 ) : null}
             </select>
             {/* Filtro por procedencia */}
-            <select name="Created" onChange={filterByCreated} id="">
+            <select className={style.filters} name="Created" onChange={filterByCreated} id="">
                 <option value="all">All Dogs</option>
                 <option value="created">Created in DB</option>
                 <option value="api">API</option>
